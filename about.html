@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>关于公司</title>
+	<link rel="stylesheet" href="css/mycss.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/myjs.js"></script>
+	<script src="js/vue.min.js"></script>
+</head>
+<body class="body">
+	<!-- 头部 -->
+	<header class="header">
+	  	<div class="nav">
+		  	<div class="nav-left">
+		  		<a href="index.html"><img src="images/logo.png" alt=""></a>
+		  	</div>
+		  	<div class="nav-right">
+		  		<ul>
+		  			<li><a href="index.html">首页</a></li>
+		  			<li><a href="advisory.html">旅游质询</a></li>
+		  			<li><a href="reservation.html">机票订购</a></li>
+		  			<li><a href="scenery.html">风景欣赏</a></li>
+		  			<li><a href="about.html">关于公司</a></li>
+		  		</ul>
+		  	</div>
+
+		  	<div class="nav-right-min">
+		  		<div class="nav-btn">
+		  			<p></p><p></p><p></p>
+		  		</div>
+		  	</div>
+	  	</div>
+  	</header>
+  	<!--主界面-->
+	<section class="section">
+		<div>
+			<form action="" class="search-bar">
+				<input type="text" class="button search-text" placeholder="请输入旅游景点城市">
+				<input type="submit" class="button search-btn" value="搜索">
+			</form>
+		</div>
+	</section>
+
+	<div class="content">
+		<!--左内容  宽占大内容的百分之68-->
+		<section class="section-content">
+			<header class="content-header">
+				<p class="content-title">关于我们</p>
+			</header>
+			<article class="about-article padding-top ">
+				<!--标签规定独立的流内容（图像、图表、照片、代码等等）-->
+				<p class="text-indent">
+					瓢城旅行社旅游网创立于2006年10月，以“让旅游更简单”为使命，为消费者提供由北京、上海、广州、深圳等64个城市出发的旅游产品预订服务，产品全面，价格透明，全年365天24小时400电话预订，并提供丰富的后续服务和保障。
+				</p>
+				<p class="text-indent">
+					目前，瓢城旅行社旅游网提供8万余种旅游产品供消费者选择，涵盖跟团、自助、自驾、邮轮、酒店、签证、景区门票以及公司旅游等，已成功服务累计超过400万人次出游。
+				</p class="text-indent">
+				<p>
+					同时基于瓢城旅行社旅游网全球中文景点目录以及中文旅游社区，可以更好地帮助游客了解目的地信息，妥善制定好出游计划，并方便地预订旅程中的服务项目。
+				</p>
+			</article>
+			<header class="content-header margin-top">
+				<p class="content-title">联系我们</p>
+			</header>
+			<figure class="about-article padding-top" id="contact">
+				<ul>
+					<li><p v-for="contact in contacts">{{contact.name}}</p></li>
+				</ul>
+				<!-- <button type="button" v-on:click="add">增加</button>  -->
+			</figure>
+		</section>
+		<aside class="aside">
+			<iframe src="aside.html" height="922px" scrolling="no"  frameborder="0" width="300px" ></iframe>
+		</aside>
+	</div>
+	<!-- 脚部 -->
+	<div full-width>
+    	<iframe src="footer.html" height="286px" scrolling="no"  frameborder="0" width="100%" ></iframe>
+	</div>
+
+<script>
+	var data={
+		contacts:[
+			{name:"瓢城旅行社股份有限公司"},
+			{name:"地址：江苏省盐城市亭湖区大庆中路1234号"},
+			{name:"邮编：1234567"},
+			{name:"电话：010-88888888"},
+			{name:"传真：010-88666666"},
+		],
+		//adds:{name:"aaa"}
+	};
+
+	
+	//ViewModel
+    var vue = new Vue({
+        el: '#contact',
+        data: data,
+        // methods: {
+        //     add: function (event) {
+        //         //把对象加入到数组
+        //         //console.log();
+        //         this.contacts.push(this.adds);
+        //         this.contacts.push(this.adds);
+        //         this.contacts.push(this.adds);
+        //         //让 hero4Add 指向新的对象
+        //     }
+        // }       
+    });
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>机票预订</title>
+	<link rel="stylesheet" href="css/mycss.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/myjs.js"></script>
+	<script src="js/vue.min.js"></script>
+</head>
+<body class="body">
+	<!-- 头部 -->
+	<header class="header">
+	  	<div class="nav">
+		  	<div class="nav-left">
+		  		<a href="index.html"><img src="images/logo.png" alt=""></a>
+		  	</div>
+		  	<div class="nav-right">
+		  		<ul>
+		  			<a href="index.html"><li>首页</li></a>
+		  			<a href="advisory.html"><li>旅游质询</li></a>
+		  			<a href="reservation.html"><li>机票订购</li></a>
+		  			<a href="scenery.html"><li>风景欣赏</li></a>
+		  			<a href="about.html"><li>关于公司</li></a>
+		  		</ul>
+		  	</div>
+
+		  	<div class="nav-right-min">
+		  		<div class="nav-btn">
+		  			<p></p><p></p><p></p>
+		  		</div>
+		  	</div>
+	  	</div>
+  	</header>
+  	<!--主界面-->
+	<section class="section">
+		<div>
+			<div>
+				<h1>旅游资讯</h1>
+				<h4>各种介绍最新旅游信息、资讯要闻、景点攻略等</h4>
+			</div>
+		</div>
+	</section>
+
+	<div class="content">
+		<!--左内容  宽占大内容的百分之68-->
+		<section class="section-content">
+			<header class="content-header">
+				<p class="content-title">机票预订</p>
+			</header>
+			<!--标签规定独立的流内容（图像、图表、照片、代码等等）-->
+			<form action="" >
+				<table class="table-booking">
+					<tr>
+						<td>航程类型</td>
+						<td><span>单程</span><span>往返</span></td>
+					</tr>
+					<tr>
+						<td>出发城市</td>
+						<td colspan="4">
+							<input type="text" placeholder="城市名" class="button text-height">
+						</td>
+						<td>出发时间</td>
+						<td>
+							<input type="text" placeholder="城市名"  class="button text-height">
+						</td>
+						<td rowspan="2">
+							<input type="button" value="订票" class="btn-warning booking-height">
+						</td>
+					</tr>
+					<tr>
+						<td>返回城市</td>
+						<td  colspan="4">
+							<input type="text" placeholder="城市名"  class="button text-height">
+						</td>
+						<td>返回时间</td>
+						<td>
+							<input type="text" placeholder="城市名"  class="button text-height">
+						</td>
+					</tr>
+				</table>
+			</form>
+			<header class="content-header margin-top">
+				<p class="content-title">最新机票</p>
+			</header>
+			<figure>
+				<dl class="ticket-city" id="city">
+					<dd>热门城市</dd>
+					<dt v-for="city in citys">{{city.name}}</dt>
+				</dl>
+			    <table class="ticket-list" >
+			        <thead>
+			        	<tr>
+			        		<td>路线</td>
+				            <td>日期</td>
+				            <td>价格</td>
+				            <td>税费</td>
+				            <td>餐食</td>
+				            <td>航班</td>
+				            <td>预定</td>
+			        	</tr>
+			        </thead>
+			        <tbody id="ticket">
+				        <tr v-for="ticket in ticketinfo">
+				            <td>{{ticket.route}}</td>
+				            <td><b>{{ticket.date}}</b></td>
+				            <td class="red">￥<b>{{ticket.price}}</b></b></td>
+				            <td>￥<b>{{ticket.taxes}}</b></td>
+				            <td>{{ticket.meal}}</td>
+				            <td>{{ticket.flight}}</td>
+				            <td>
+				            	<input type="button" v-model="ticket.reserve" class="btn-warning">
+				            </td>
+				        </tr>
+				        <tr>
+				        	<td colspan="7"><button class="button-style-clear" v-on:click="add">加载更多航班....</button></td>
+				        </tr>
+			        </tbody>
+			    </table>
+			</figure>
+		</section>
+		<aside class="aside">
+			<iframe src="aside.html" height="922px" scrolling="no"  frameborder="0" width="300px" ></iframe>
+		</aside>
+	</div>
+	<!-- 脚部 -->
+	<div full-width>
+    	<iframe src="footer.html" height="286px" scrolling="no"  frameborder="0" width="100%" ></iframe>
+	</div>
+<script>
+
+	var data={
+	  	ticketinfo:[
+			{id:0,route:"北京-成都",date:"10-15",price:25,taxes:50,meal:"有",flight:"春秋航空",reserve:"预定"},
+			{id:1,route:"北京-成都",date:"10-15",price:745,taxes:50,meal:"有",flight:"春秋航空",reserve:"预定"},
+			{id:2,route:"北京-成都",date:"10-15",price:745,taxes:50,meal:"无",flight:"澳门航空",reserve:"预定"},
+			{id:3,route:"北京-成都",date:"10-15",price:745,taxes:50,meal:"有",flight:"春秋航空",reserve:"预定"},
+			{id:4,route:"北京-成都",date:"10-15",price:458,taxes:50,meal:"有",flight:"春秋航空",reserve:"预定"},
+			{id:5,route:"北京-成都",date:"10-15",price:745,taxes:50,meal:"有",flight:"春秋航空",reserve:"预定"},
+			{id:6,route:"北京-成都",date:"10-15",price:745,taxes:50,meal:"有",flight:"春秋航空",reserve:"预定"},
+			{id:7,route:"北京-成都",date:"10-15",price:745,taxes:50,meal:"有",flight:"春秋航空",reserve:"预定"},
+			{id:8,route:"北京-成都",date:"10-15",price:745,taxes:50,meal:"有",flight:"春秋航空",reserve:"预定"}
+		],
+		addticket:{id:9,route:"北京-成都",date:"10-15",price:745,taxes:50,meal:"有",flight:"春秋航空",reserve:"预定"}
+	};
+
+	var maxId = 0;
+    //计算最大值
+    for (var i=0;i<data.ticketinfo.length;i++){
+        if (data.ticketinfo[i].id > maxId)
+            maxId=data.ticketinfo[i].id;
+    }   
+
+	var vue = new Vue({
+		el:"#ticket",
+		data:data,
+		methods: {
+            add: function (event) {
+                //把对象加入到数组
+                for (var i = 0; i < 5; i++) {
+                	//获取最大id
+                	maxId++;
+                //赋予新id
+	                this.addticket.id = maxId;
+	                this.ticketinfo.push(this.addticket);
+                }
+                //让 hero4Add 指向新的对象
+                this.addticket = {id:maxId,route:"北京-成都",date:"10-15",price:745,taxes:50,meal:"有",flight:"春秋航空",reserve:"预定"}
+            }
+        }     
+	});
+
+	var city=[
+		{name:"北京"},
+		{name:"北京"},
+		{name:"北京"},
+		{name:"北京"},
+		{name:"北京"},
+		{name:"北京"},
+		{name:"北京"},
+		{name:"北京"},
+	];
+
+	new Vue({
+		el:"#city",
+		data:{
+			citys:city
+		}
+	})
+
+
+	//ViewModel
+    // var vue = new Vue({
+    //     el: '#app',
+    //     data: ticketinfo,
+    //     methods: {
+    //         add: function (event) {
+    //             //把对象加入到数组
+    //             this.push(this.hero4Add);
+    //             //让 hero4Add 指向新的对象
+    //             this.hero4Add = { id: 0, name: '', hp: '0'}
+    //         }
+    //     }       
+    // });
+</script>
+</body>
+</html>

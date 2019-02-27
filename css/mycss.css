@@ -1,0 +1,674 @@
+/*
+* @Author: hp
+* @Date:   2018-10-26 10:24:45
+* @Last Modified by:   hp
+* @Last Modified time: 2018-11-05 19:53:58
+*/
+
+/*--------------------------------------------------公用样式---------------------------------------------------*/
+*{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	font-size: 14px;
+}
+
+li{
+	border-radius: 2px;
+}
+
+.body{
+	background-color: #eee;
+}
+
+.border-picture{
+	width: 98%;
+	padding: 3px;
+}
+
+.color-gray{
+	color: #333;
+	line-height: 20px;
+}
+
+.font-style-clear{
+	font-style: normal;
+	color: black;
+	text-decoration: none;
+}
+
+/*图片绿色小标题*/
+.picture-tag{
+	background-color: #59b201;
+	line-height: 20px;
+	padding: 0px 5px;
+	color: white;
+	position: absolute;
+	border-radius: 0px 0px 5px;
+}
+
+.top-down-padding-10{
+	padding: 10px 0px;
+}
+
+.button{
+	border: none;
+	outline: none;
+	border: 1px solid #bbb;
+	border-radius: 5px;
+	background-color: white;
+}
+
+.ordinary-button{
+	width: 120px;
+	line-height: 42px;
+	cursor: pointer;
+}
+
+.float-left{
+	float: left;
+}
+
+
+
+/*--------------------------------------------------头部标签--------------------------------------------*/
+
+
+.header{
+	width: 100%;
+	background-color: #333333;
+	position: fixed;
+	top: 0px;
+	z-index: 1030;
+	}
+
+	/*导航栏*/
+	.nav{
+		margin: 0px auto;
+	}
+	/*首页左部分*/
+	.nav-left img{
+		width: 193px;position: relative;
+	}
+
+
+	/*小屏模式下右导航栏*/
+	.nav-right-min{
+		position: fixed;
+		right: 5%;
+		
+	}
+	/*小屏按钮*/
+	.nav-btn{
+		width: 50px;
+		height: 40px;
+		font-weight: bold;
+		background-color: #666;
+		color: #bbb;
+		float: right;
+		margin-top: 10px;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	/*按钮样式*/
+	.nav-btn p{
+		width: 30px;
+		height: 6px;
+		border-bottom: 2px solid #999;
+		margin-left: 10px;
+		margin-top: 3px;
+	}
+
+
+	.nav-left{
+		float: left;
+	}
+
+	/*右导航栏*/
+	.nav-right{
+		float: right;
+		text-align: center;
+	}
+
+	.nav-right ul li{
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+	.nav-right ul a{
+		text-decoration: none;
+		color: white;
+	}
+
+
+/*--------------------------------------------------图片主页--------------------------------------------*/
+.section{
+	background-image: url('../images/adver.jpg');
+	overflow: hidden;
+	width: 100%;
+	padding: 200px 0px;
+	margin-top: 60px;
+	background-position:-200px 0px;
+	transition: 1s;
+	position: relative;
+}
+
+.search-btn{
+	width: 80px;
+	height: 42px;
+	cursor: pointer;
+	border-radius: 0px 5px 5px 0px;
+	border-left: 1px solid transparent;
+}	
+
+.search-text{
+	width: 260px;
+	height: 40px;
+	padding-left: 5px;
+	float: left;
+	border-radius: 5px 0px 0px 5px;
+}
+
+.search-bar{
+	position: absolute;
+	left: 36%;
+	width: 360px;
+	float: left;
+}
+
+
+/*--------------------------------------------------脚部标签--------------------------------------------*/
+.footer{
+	background-color: #222222;
+}
+
+.footer-top{
+	width: 70%;
+	overflow: hidden;
+	margin: 0px auto;
+}
+
+.footer-top>div{
+	width: 25%;
+	float: left;
+	margin-right:40px;
+	margin-top: 10px;
+}
+
+.footer-top div p{
+	line-height: 50px;
+	color: #eee;
+	font-size: 18px;
+}
+
+.footer-top ul{
+	overflow: hidden;
+	border-top: 1px dashed  #999;
+}
+
+.footer-top ul li{
+	margin: 6px 0px;
+	font-size: 14px;
+}
+
+.footer-top ul li a{
+	text-decoration: none;
+	color: #666;
+}
+
+.footer-botton{
+	margin-top: 30px;
+	text-align: center;
+	line-height: 60px;
+	background-color: #000000;
+	width: 100%;
+	color: #999;
+}
+
+/*-----------------------------------------------主页------------------------------------------------*/
+/*内容宽度*/
+.content{
+	width: 1000px;
+	margin: 50px auto;
+	overflow: hidden;
+}
+
+.content-header{
+	width: 100%;
+	text-align: center;
+}
+/*大标题*/
+.Headline{
+	line-height: 60px;
+	font-size: 30px;
+}
+
+.index-content li{
+	float: left;
+	width: 310px;
+	position: relative;
+	border: 1px solid #999;
+	margin: 10px;
+	cursor: pointer;
+}
+
+.index-content li a>span{
+	top: 3px;
+	left: 3px;
+}
+
+.font-left{
+	float: left;
+	padding-left: 5px;
+}
+.font-left b{
+	color: red;
+	font-size: 18px;
+}
+
+.font-right{
+	float: right;
+	padding-right: 5px;
+	color: gray;
+}
+
+.full-width{
+	width: 100%;
+}
+
+/*----------------------------------------风景欣赏--------------------------------------------------*/
+/*左内容  大多为百分之68*/
+.section-content{
+	width: 680px;
+	float: left;
+}
+
+/*内容标题*/
+.content-title{
+	font-size: 22px;
+	color: #444;
+	text-align: left;
+	padding-bottom: 20px;
+}
+
+/*左边内容上边距线*/
+.content-three-table{
+	overflow: hidden;
+	border-top:1px dashed #999;
+	padding: 10px 0px;
+}
+
+/*每排三行*/
+.content-three-table li{
+	width: 214px;
+	border: 1px solid #eee;
+	float: left;
+	text-align: center;
+	margin: 5px;
+}
+
+.no-spread{
+	width: 96%;
+	margin-top: 3px;
+}
+
+/*设置行高*/
+.line-height{
+	line-height: 30px;
+}
+
+
+
+.layout-center{
+	width:100%;
+	text-align: center;
+}
+
+
+.grey-font{
+	font-size: 14px;
+	color: #333;
+}
+
+.light-grey-font{
+	font-size: 14px;
+	color: #666;
+}
+
+/*------------------------------------------------右侧框架栏--------------------------------------------------------*/
+/*右内容*/
+.aside{
+	width: 300px;
+	float: right;
+	overflow: hidden;
+}
+
+/*figure的标题*/
+.figure-title{
+	width: 100%;
+	background-color: #bbb;
+	line-height: 30px;
+	padding-left: 10px;
+
+}
+
+.figure-top-table li{
+	float: left; 
+	width: 30%;
+	line-height: 25px;
+	background-color: #eee;
+	margin: 2px;
+}
+
+.figure-under-table li{
+	float: left;
+	width: 45%;
+	background-color: #eee;
+	margin: 3px;
+}
+
+.white-background{
+	background-color: white;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.icon{
+	margin: 5px;
+	float: left;
+}
+
+.icon-font{
+	line-height: 30px;
+	float: left;
+	font-size: 14px;
+}
+
+/*----------------------------------------------机票预订------------------------------------------------------------*/
+
+.ticket-city{
+	border-top:1px dashed #999;
+}
+
+.ticket-city dt,.ticket-city dd{
+	float: left;
+	padding: 5px 10px;
+	margin: 20px 5px;
+	border-radius: 5px;
+}
+
+.ticket-city dt:hover{
+	background-color: #68ddbf;
+	color: white;
+	cursor: pointer;
+}
+
+.ticket-list{
+	width: 100%;
+	background-color: white;
+	
+}
+
+.ticket-list{
+	border-collapse:collapse;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+.ticket-list tr:nth-of-type(2n-1),.ticket-list tr:last-child{
+	background-color: #eee;
+}
+
+.ticket-list tr td{
+	line-height: 46px;
+}
+
+.red{
+	color: red;
+}
+
+.btn-warning{
+	color: white;
+	width: 80px;
+	line-height: 30px;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: #ff6602;
+}
+
+.table-booking{
+	line-height: 30px;
+	border-top:1px dashed #999;
+}
+
+.table-booking td,.table-booking span{
+	padding: 5px 5px;
+}
+
+.table-booking span{
+	background-color: green;
+	border-radius: 5px;
+	margin-right: 5px;
+	color: white;
+}
+
+.text-height{
+	line-height: 26px;
+	padding-left: 5px;
+}
+
+.booking-height{
+	line-height: 56px;
+}
+
+.margin-top{
+	margin-top: 30px;
+}
+
+.padding-top{
+	padding-top: 30px;
+
+}
+.about-article{
+	overflow: hidden;
+	border-top:1px dashed #999;
+}
+
+.about-article p{
+	font-size: 18px;
+	line-height: 20px;
+}
+.text-indent{
+	text-indent:2em;
+}
+.advisory-content li{
+	position: relative;
+	overflow: hidden;
+	margin: 10px 0px;
+}
+
+.advisory-content li>div{
+	float: left;
+}
+
+.advisory-picture{
+	width:300px;
+}
+
+.advisory-picture img{
+	width: 100%;
+}
+
+.article-article span{
+	font-size: 20px;
+	line-height: 50px;
+}
+
+.content-right{
+	margin-left: 20px;
+	width: 350px;
+}
+
+.article-article{
+  width: 200px;
+  float: left;
+}
+
+.content-right>div{
+	overflow: hidden;
+}
+
+.article-figure{
+	float: right;
+	width: 120px;
+}
+
+.small-font{
+	font-size: 12px;
+}
+.article-article>p{
+	margin-top: 10px;
+}
+
+.article-footer{
+	width: 300px;
+}
+
+
+.two{
+	border: 1px solid green;
+	color: green;
+	border-radius: 3px;
+}
+
+.three{
+}
+
+.four{
+	margin: 10px 0;
+}
+
+.button-style-clear{
+	border: none;
+	cursor: pointer;
+}
+
+
+.figure-top-table li:hover{
+	background-color: #85dd68;
+}
+
+.snap-btn{
+	width: 120px;
+	line-height: 40px;
+	background-color: #ff6602;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+.font-o{
+	font-size: 20px;
+	
+}
+
+.font-pri{
+	color: #ff6602;
+}
+
+.font-del{
+	color: #999;
+}
+
+.mag{
+	padding: 60px 0px 10px;
+}
+
+.gree{
+	color: green;
+}
+
+.pic-title{
+	left: 0px;
+}
+
+.right-ico{
+	background-color: #fef4d9;
+	color: red;
+	padding: 30px 20px 0px;
+	line-height: 20px;
+	transform: rotate(45deg);
+	position: absolute;
+	right: -30px;
+	top: -20px;
+}
+
+
+
+
+/*--------------------------------------------------小屏显示--------------------------------------------*/
+@media (max-width:768px){
+	.nav{
+		width: 100%;
+	}
+	/*右侧小屏菜单*/
+	.nav-right{
+		text-align: center;
+		width: 100%;
+		display: none;
+	}
+	.nav-right li{
+		width: 100%;
+		border-radius: 5px;
+		line-height: 40px;
+	}
+
+	.nav-right li:hover{
+		background-color: #eee;
+	}
+	
+	.index-content li{
+		width: 90%;
+	}
+
+	.content{
+		width:90%
+	}
+
+	.section{
+		width:100%
+	}
+	
+
+}
+
+/*大屏*/
+@media (min-width:768px){
+	.nav{
+		width: 90%;
+	}
+	/*菜单栏*/
+	.nav-right-min{
+		display: none;
+	}
+
+	/*大屏模式下右导航栏*/
+	.nav-right ul li{
+		float: left;
+		width: 80px;
+		line-height: 60px;
+	}
+
+}
+
+/*--------------------------------------------------大屏显示--------------------------------------------*/
+@media (min-width:1200px){
+	.nav{
+		width: 1000px;
+	}
+}

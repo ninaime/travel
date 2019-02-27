@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>风景欣赏</title>
+	<link rel="stylesheet" href="css/mycss.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/myjs.js"></script>
+	<script src="js/vue.min.js"></script>
+</head>
+<body class="body">
+<aside class="aside">
+	<figure id="scenic">
+		<p class="figure-title">景点介绍</p>
+			<div class="white-background">
+					<ul class="figure-top-table">
+						<li v-for="scenic in scenics">
+							<a href="" class="font-style-clear">{{scenic.introduce}}</a>
+						</li>
+					</ul>
+				</div>
+			</figure>
+			<figure id="travel">
+				<p class="figure-title">热卖旅游</p>
+				<div class="white-background">
+					<ul class="figure-under-table">
+						<li v-for="travel in travels">
+							<a href=""  class="font-style-clear">
+								<img :src="travel.imgurl" alt="" class="no-spread">
+								<p class="grey-font">{{travel.introduce}}</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</figure>
+			<figure id="sell">
+				<p class="figure-title">旅游百宝箱</p>
+				<div class="white-background">
+					<ul class="figure-under-table">
+						<li v-for="sell in sells">
+							<a href=""  class="font-style-clear">
+								<img src="images/trea1.png" alt="" class="icon">
+								<p class="icon-font">{{sell.introduce}}</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</figure>
+		</aside>
+	</div>
+<script>
+
+	var scenic=[
+		{introduce:"曼谷(8)"},
+		{introduce:"西双版纳(12)"},
+		{introduce:"曼谷(8)"},
+		{introduce:"西双版纳(12)"},
+		{introduce:"曼谷(8)"},
+		{introduce:"西双版纳(12)"},
+		{introduce:"曼谷(8)"},
+		{introduce:"曼谷(8)"},
+		{introduce:"西双版纳(12)"},
+		{introduce:"曼谷(8)"},
+		{introduce:"西双版纳(12)"},
+		{introduce:"曼谷(8)"},
+		{introduce:"西双版纳(12)"},
+		{introduce:"曼谷(8)"},
+		{introduce:"曼谷(8)"},
+		{introduce:"西双版纳(12)"},
+		{introduce:"曼谷(8)"},
+		{introduce:"西双版纳(12)"},
+		{introduce:"曼谷(8)"},
+		{introduce:"西双版纳(12)"},
+		{introduce:"曼谷(8)"},
+
+	];
+
+	new Vue({
+		el:"#scenic",
+		data:{
+			scenics:scenic
+		}
+	})
+
+
+	var travel=[
+		{introduce:"曼谷(8)",imgurl:"images/tour1.jpg"},
+		{introduce:"西双版纳(12)",imgurl:"images/tour2.jpg"},
+		{introduce:"曼谷(8)",imgurl:"images/tour3.jpg"},
+		{introduce:"西双版纳(12)",imgurl:"images/tour4.jpg"},
+		{introduce:"曼谷(8)",imgurl:"images/tour1.jpg"},
+		{introduce:"西双版纳(12)",imgurl:"images/tour1.jpg"},
+		{introduce:"曼谷(8)",imgurl:"images/tour1.jpg"},
+		{introduce:"曼谷(8)",imgurl:"images/tour1.jpg"},
+	];
+
+	new Vue({
+		el:"#travel",
+		data:{
+			travels:travel
+		}
+	})
+
+	var sell=[
+		{introduce:"海南双飞五日游"},
+		{introduce:"海南双飞五日游"},
+		{introduce:"海南双飞五日游"},
+		{introduce:"海南双飞五日游"},
+	];
+
+	new Vue({
+		el:"#sell",
+		data:{
+			sells:sell
+		}
+	})
+
+
+</script>
+</body>
+</html>

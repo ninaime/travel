@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>风景欣赏</title>
+	<link rel="stylesheet" href="css/mycss.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/myjs.js"></script>
+	<script src="js/vue.min.js"></script>
+</head>
+<body>
+	<header class="header">
+	  	<div class="nav">
+		  	<div class="nav-left">
+		  		<a href="#"><img src="images/logo.png" alt=""></a>
+		  	</div>
+		  	<div class="nav-right">
+		  		<ul>
+		  			<li><a href="index.html">首页</a></li>
+		  			<li><a href="advisory.html">旅游质询</a></li>
+		  			<li><a href="reservation.html">机票订购</a></li>
+		  			<li><a href="scenery.html">风景欣赏</a></li>
+		  			<li><a href="about.html">关于公司</a></li>
+		  		</ul>
+		  	</div>
+
+		  	<div class="nav-right-min">
+		  		<div class="nav-btn">
+		  			<p></p><p></p><p></p>
+		  		</div>
+		  	</div>
+	  	</div>
+  	</header>
+  	<!--主界面-->
+	<section class="section">
+		<div>
+			<form action="" class="search-bar">
+				<input type="text" class="button search-text" placeholder="请输入旅游景点城市">
+				<input type="submit" class="button search-btn" value="搜索">
+			</form>
+		</div>
+	</section>
+	
+	<!--内容-->
+	<div class="content">
+		<!--左内容  宽占大内容的百分之68-->
+		<section class="section-content">
+			<header class="content-header">
+				<p class="content-title">风景欣赏</p>
+			</header>
+			<!--标签规定独立的流内容（图像、图表、照片、代码等等）-->
+			<figure id="landscape">
+				<ul class="content-three-table" >
+					<li v-for="landscape in landscapes">
+						<a href="" class="font-style-clear">
+							<img src="images/tour1.jpg" alt="图片未显示" class="border-picture">
+							<p class="line-height">{{landscape.introduce}}</p>
+						</a>
+					</li>
+				</ul>
+				<footer class="layout-center">
+					<input type="button" value="加载更多..." class="button ordinary-button">
+				</footer>
+			</figure>
+		</section>
+		
+		<aside class="aside">
+			<iframe src="aside.html" height="922px" scrolling="no"  frameborder="0" width="300px" ></iframe>
+		</aside>
+	</div>
+	<!--脚部-->
+	<footer full-width>
+    	<iframe src="footer.html" height="286px" scrolling="no"  frameborder="0" width="100%" ></iframe>
+	</footer>
+<script>
+	var landscape=[
+		{introduce:"曼谷-芭提雅[共8张]"},
+		{introduce:"曼谷-芭提雅[共8张]"},
+		{introduce:"曼谷-芭提雅[共8张]"},
+		{introduce:"曼谷-芭提雅[共8张]"},
+		{introduce:"曼谷-芭提雅[共8张]"},
+		{introduce:"曼谷-芭提雅[共8张]"},
+		{introduce:"曼谷-芭提雅[共8张]"},
+		{introduce:"曼谷-芭提雅[共8张]"},
+		{introduce:"曼谷-芭提雅[共8张]"},
+	];
+
+	new Vue({
+		el:"#landscape",
+		data:{
+			landscapes:landscape
+		}
+	})
+</script>
+</body>
+</html>

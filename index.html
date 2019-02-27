@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<link rel="stylesheet" href="css/mycss.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/myjs.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script src="js/vue-router.min.js"></script>
+</head>
+<body>
+	<header class="header">
+	  	<div class="nav">
+		  	<div class="nav-left">
+		  		<a href="index.html"><img src="images/logo.png" alt=""></a>
+		  	</div>
+		  	<div class="nav-right">
+		  		<ul>
+		  			<a href="index.html"><li>首页</li></a>
+		  			<a href="advisory.html"><li>旅游质询</li></a>
+		  			<a href="reservation.html"><li>机票订购</li></a>
+		  			<a href="scenery.html"><li>风景欣赏</li></a>
+		  			<a href="about.html"><li>关于公司</li></a>
+		  		</ul>
+		  	</div>
+
+		  	<div class="nav-right-min">
+		  		<div class="nav-btn">
+		  			<p></p><p></p><p></p>
+		  		</div>
+		  	</div>
+	  	</div>
+  	</header>
+  	<!--主界面-->
+	<section class="section">
+		<div>
+			<form action="" class="search-bar">
+				<input type="text" class="button search-text" placeholder="请输入旅游景点城市">
+				<input type="submit" class="button search-btn" value="搜索">
+			</form>
+		</div>
+	</section>
+	
+	<section class="content">
+		<header class="content-header content">
+			<h1 class="Headline">热门旅游</h1>
+			<p>国内旅游、国外旅游、自制旅游、邮轮旅游</p>
+		</header>
+		<article class="article" id="populartourist">
+			<ul class="index-content">
+				<li v-for="popt in popts">
+					<a>
+						<span class="picture-tag">{{popt.route}}</span>
+						<img :src="popt.imgurl" alt="" class="border-picture">
+						<p class="color-gray">
+							<em class="font-style-clear">{{popt.prompt}}</em>
+							{{popt.text}}
+						</p>
+					</a>
+					<div class="top-down-padding-10">
+						<p class="font-left">$<b>{{popt.price}}</b>起</p>
+						<i class="font-right">满意度{{popt.satlsfaction}}%</i>
+					</div>
+				</li>
+			</ul>
+		</article>
+	</section>
+	<div full-width>
+    	<iframe src="footer.html" height="286px" scrolling="no"  frameborder="0" width="100%" ></iframe>
+	</div>
+<script>
+	var populartourist=[
+		{route:"国内路线",price:745,prompt:"<曼谷芭提雅6日游>",imgurl:"images/tour1.jpg",
+		text:"曼谷芭提雅6日游,超丰富景点，无自费，更享受600元/人购物卷",satlsfaction:77},
+		{route:"国内路线",price:745,prompt:"<曼谷芭提雅6日游>",imgurl:"images/tour1.jpg",
+		text:"曼谷芭提雅6日游,超丰富景点，无自费，更享受600元/人购物卷",satlsfaction:77},
+		{route:"国内路线",price:745,prompt:"<曼谷芭提雅6日游>",imgurl:"images/tour1.jpg",
+		text:"曼谷芭提雅6日游,超丰富景点，无自费，更享受600元/人购物卷",satlsfaction:77},
+		{route:"国内路线",price:745,prompt:"<曼谷芭提雅6日游>",imgurl:"images/tour1.jpg",
+		text:"曼谷芭提雅6日游,超丰富景点，无自费，更享受600元/人购物卷",satlsfaction:77},
+		{route:"国内路线",price:745,prompt:"<曼谷芭提雅6日游>",imgurl:"images/tour1.jpg",
+		text:"曼谷芭提雅6日游,超丰富景点，无自费，更享受600元/人购物卷",satlsfaction:77},
+		{route:"国内路线",price:745,prompt:"<曼谷芭提雅6日游>",imgurl:"images/tour1.jpg",
+		text:"曼谷芭提雅6日游,超丰富景点，无自费，更享受600元/人购物卷",satlsfaction:77},
+		{route:"国内路线",price:745,prompt:"<曼谷芭提雅6日游>",imgurl:"images/tour1.jpg",
+		text:"曼谷芭提雅6日游,超丰富景点，无自费，更享受600元/人购物卷",satlsfaction:77},
+		{route:"国内路线",price:745,prompt:"<曼谷芭提雅6日游>",imgurl:"images/tour1.jpg",
+		text:"曼谷芭提雅6日游,超丰富景点，无自费，更享受600元/人购物卷",satlsfaction:77},
+		{route:"国内路线",price:745,prompt:"<曼谷芭提雅6日游>",imgurl:"images/tour1.jpg",
+		text:"曼谷芭提雅6日游,超丰富景点，无自费，更享受600元/人购物卷",satlsfaction:77},
+	];
+
+	new Vue({
+		el:"#populartourist",
+		data:{
+			popts:populartourist
+		}
+	})
+</script>
+</body>
+</html>
